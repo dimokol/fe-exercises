@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import FontAwesomeConfig from "./fontawesome";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +25,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <head>
+        <FontAwesomeConfig />
+        <link rel="icon" href="/reddit-4.svg" type="image/svg+xml" />
+      </head>
+      <body className="bg-gray-100 text-gray-800">
+        <div className="container mx-auto py-4">
+          {children}
+        </div>
       </body>
     </html>
   );
