@@ -1,9 +1,9 @@
+import SubredditList from "@/components/subredditList";
+
 export default function Home() {
   return (
-    <section className='py-24'>
-      <div className='container'>
-        <h1 className='text-3xl font-bold'>Next TS Starter</h1>
-      </div>
-    </section>
-  )
+    <main className="flex items-center justify-center min-h-screen bg-gray-100">
+      <SubredditList />
+    </main>
+  );
 }
