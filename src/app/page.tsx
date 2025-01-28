@@ -33,11 +33,12 @@ const HomePage = () => {
     <div className="bg-blue-100 p-6 rounded-2xl shadow-md w-full max-w-md mx-auto relative">
       <div className="relative h-20 -my-6 -mx-6">
         <Image
-          src="/background.webp"
+          src="/images/background.webp"
           alt="Background"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-t-2xl opacity-50"
+          fill
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+          className="rounded-t-2xl opacity-50 object-cover"
         />
         <h2 className="text-white text-xl font-bold relative z-10 p-4 pt-10">Top News Communities</h2>
       </div>

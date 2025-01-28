@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <FontAwesomeConfig />
-        <link rel="icon" href="/reddit-4.svg" type="image/svg+xml" />
+        <link rel="icon" href="/images/reddit-4.svg" type="image/svg+xml" />
       </head>
       <body className="bg-gray-100 text-gray-800">
         <div className="container mx-auto py-4">

@@ -21,7 +21,7 @@ const SubredditCard: React.FC<SubredditCardProps> = ({ rank, name, status, isOpe
             <FontAwesomeIcon icon={statusIcon} />
           </span>
         )}
-        <img src={`/subreddits/${name}.webp`} alt={`${name}`} className="w-5 h-5 rounded-full mr-2" />
+        <img src={`/images/subreddits/${name}.webp`} alt={`${name}`} className="w-5 h-5 rounded-full mr-2" />
         <span>r/{name}</span>
       </div>
       {isOpen && (
