@@ -1,3 +1,3 @@
 export default function ShippingComponentsPage() {
-  return <h1>Shipping Components Page</h1>;
+  return <h1>Shipping Components Page</h1>
 }

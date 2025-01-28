@@ -1,34 +1,47 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 type SubredditCardProps = {
-  rank: number;
-  name: string;
-  status: string;
-  isOpen: boolean;
-};
+  rank: number
+  name: string
+  status: string
+  isOpen: boolean
+}
 
-const SubredditCard: React.FC<SubredditCardProps> = ({ rank, name, status, isOpen }) => {
-  const statusIcon = (status === 'up') ? faAngleUp : faAngleDown;
-  
+const SubredditCard: React.FC<SubredditCardProps> = ({
+  rank,
+  name,
+  status,
+  isOpen
+}) => {
+  const statusIcon = status === 'up' ? faAngleUp : faAngleDown
+
   return (
-    <li className="flex justify-between items-center py-2">
-      <div className="flex items-center">
-        <span className="mr-2">{rank}</span>
+    <li className='flex items-center justify-between py-2'>
+      <div className='flex items-center'>
+        <span className='mr-2'>{rank}</span>
         {statusIcon && (
-          <span className={`mr-2 ${status === 'up' ? 'text-green-500' : status === 'down' ? 'text-red-500' : 'invisible'}`}>
+          <span
+            className={`mr-2 ${status === 'up' ? 'text-green-500' : status === 'down' ? 'text-red-500' : 'invisible'}`}
+          >
             <FontAwesomeIcon icon={statusIcon} />
           </span>
         )}
-        <img src={`/images/subreddits/${name}.webp`} alt={`${name}`} className="w-5 h-5 rounded-full mr-2" />
+        <img
+          src={`/images/subreddits/${name}.webp`}
+          alt={`${name}`}
+          className='mr-2 h-5 w-5 rounded-full'
+        />
         <span>r/{name}</span>
       </div>
       {isOpen && (
-        <button className="bg-blue-500 text-white px-5 py-1 rounded-full">Join</button>
+        <button className='rounded-full bg-blue-500 px-5 py-1 text-white'>
+          Join
+        </button>
       )}
     </li>
-  );
-};
+  )
+}
 
-export default SubredditCard;
+export default SubredditCard
