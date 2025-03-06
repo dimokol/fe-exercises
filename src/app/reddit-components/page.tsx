@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import SubredditCard from '../../components/subredditCard'
+import SubredditCard from './components/subredditCard'
 import { fetchSubreddits } from '../../lib/api'
 import { Subreddit } from '../../types'
 import Image from 'next/image'
