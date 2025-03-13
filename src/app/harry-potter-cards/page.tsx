@@ -8,11 +8,13 @@ export default function HarryPotterCardsPage() {
   const { houses, loading } = useHouses();
 
   return (
-    <div>
+    <div className="container mx-auto p-4">
       {loading ? (
-        <LoadingSpinner />
+        <div className="flex justify-center items-center h-screen">
+          <LoadingSpinner />
+        </div>
       ) : (
-        <div>
+        <div className="flex justify-center flex-col space-y-4">
           {houses.map(house => (
             <HouseCard key={house.id} house={house} />
           ))}

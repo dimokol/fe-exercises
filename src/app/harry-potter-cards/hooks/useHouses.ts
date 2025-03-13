@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import { House } from '../types';
+import { House } from '../components/HouseCard';
 
 const API_URL = 'https://wizard-world-api.herokuapp.com/houses';
 

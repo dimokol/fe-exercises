@@ -1,4 +1,6 @@
-interface House {
+import React from 'react';
+
+export interface House {
   id: string;
   name: string;
   houseColours: string;
@@ -36,18 +38,15 @@ const HouseCard: React.FC<{ house: House }> = ({ house }) => {
   const gradientColors = parseColors();
 
   return (
-    <div className="house-card" style={{ fontFamily: 'Verdana', margin: '20px 0', padding: '15px', boxShadow: '0 2px 5px rgba(0,0,0,0.1)' }}>
-      <div className="house-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <h2 style={{ fontWeight: 'bold', margin: 0 }}>{name}</h2>
+    <div className="font-['Verdana'] my-5 p-4 shadow-md border-2 rounded-lg max-w-lg mx-auto w-full">
+      <div className="flex justify-between items-center">
+        <h2 className="font-bold m-0 text-2xl">{name}</h2>
         <span>{animal}</span>
       </div>
       <div
-        className="gradient-bar"
+        className="my-2 h-2.5 rounded-lg"
         style={{
-          background: `linear-gradient(to right, ${gradientColors})`,
-          borderRadius: '8px',
-          height: '10px',
-          margin: '10px 0'
+          background: `linear-gradient(to right, ${gradientColors})`
         }}
       />
       <p>
